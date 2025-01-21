@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import  { useEffect, useMemo, useState } from 'react'
 import PlusIcon from '../Icons/PlusIcon'
 import { Column, ID, Task } from '../type';
 import ColumnContainer from '../components/ColumnContainer';
@@ -194,7 +194,8 @@ const KanbanBoard = () => {
                                 tasks={tasks.filter((task) => task.columnId === activeColumn.id)}
                                 deleteTask={deleteTask}
                                 updateTask={updateTask} />)}
-                            {activeTask && <TaskCard task={activeTask} deletetask={deleteTask} updateTask={updateTask} />}
+                            {activeTask && <TaskCard task={activeTask} deleteTask={deleteTask}
+                                updateTask={updateTask} />}
                         </DragOverlay>, document.body
                     )}
 
